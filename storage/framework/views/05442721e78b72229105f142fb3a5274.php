@@ -1,0 +1,1 @@
+client<?php /**PATH C:\xampp\htdocs\myAdmin\resources\views/client/client.blade.php ENDPATH**/ ?>

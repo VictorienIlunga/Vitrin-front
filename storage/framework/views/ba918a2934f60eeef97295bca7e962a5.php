@@ -1,0 +1,1 @@
+produit<?php /**PATH C:\xampp\htdocs\Bussiness\resources\views/produit/produit.blade.php ENDPATH**/ ?>
