@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class CreditController extends Controller
 {
     public function OperationCredit(request $request){
-        $chechCredit=credit::where('statut','wait')->count();
+        $chechCredit=credit::where('client_id',$request->clientId)->where('statut','wait')->count();
         if ($chechCredit==0) {
             if(password_verify($request->password,Auth::user()->password)){
             $capital=capital::orderbydesc('id')->get();

@@ -2,7 +2,7 @@
 <x-guest-layout>
 
     <div>
-        <img src="{{asset('storage/logo/GONEY 11.webp')}}" alt="logo goney" class="w-auto h-20 ">
+        <img src="{{asset('storage/logo/octogone-pls.png')}}" alt="logo octogone" class="w-60 h-auto ">
     </div>
     <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white md:shadow-md overflow-hidden sm:rounded-lg">
     <!-- Session Status -->

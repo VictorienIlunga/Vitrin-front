@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Laravel') }}</title>
-        <script src="{{asset('jquery/jquery.js')}}"></script>
-        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon/favicon-32x32.png')}}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+        <title><?php echo e(config('app.name', 'Laravel')); ?></title>
+        <script src="<?php echo e(asset('jquery/jquery.js')); ?>"></script>
+        <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col justify-center items-center  sm:pt-0 bg-white md:bg-gray-100">
             
-                {{ $slot }}
+                <?php echo e($slot); ?>
+
            
         </div>
 
@@ -50,3 +49,4 @@
 
     </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\octogone finance\resources\views/layouts/guest.blade.php ENDPATH**/ ?>

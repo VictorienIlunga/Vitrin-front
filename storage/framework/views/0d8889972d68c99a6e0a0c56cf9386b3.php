@@ -5,9 +5,10 @@
         <div class="w-[90%] h-24 flex ">
        <div class="w-[70%] flex flex-col   text-black ">
           <div class="text-gray-500">CLIENTS</div>
-          <div class="font-bold">{{$client}}</div>
+          <div class="font-bold"><?php echo e($client); ?></div>
           <div class="text-[13px]">
-            {{App\Http\Controllers\statiController::pourcentageclient()}}
+            <?php echo e(App\Http\Controllers\statiController::pourcentageclient()); ?>
+
              par rapport au mois derniers</div>
            
          </div>
@@ -26,9 +27,10 @@
        <div class="w-[90%] h-24 flex ">
       <div class="w-[70%] flex flex-col   text-black ">
          <div class="text-gray-500">CREDITS</div>
-         <div class="font-bold">{{$credit}}</div>
+         <div class="font-bold"><?php echo e($credit); ?></div>
          <div class="text-[13px]">
-        {{App\Http\Controllers\statiController::pourcentagcredit()}}
+        <?php echo e(App\Http\Controllers\statiController::pourcentagcredit()); ?>
+
             par rapport au mois derniers</div>
           
         </div>
@@ -45,9 +47,10 @@
      <div class="w-[90%] h-24 flex ">
     <div class="w-[70%] flex flex-col   text-black ">
        <div class="text-gray-500">Intérêts</div>
-       <div class="font-bold">{{number_format($interet, 2, '.', ' ')}}Fbu</div>
+       <div class="font-bold"><?php echo e(number_format($interet, 2, '.', ' ')); ?>Fbu</div>
        <div class="text-[13px]">
-        {{App\Http\Controllers\statiController::pourcentageinteret()}}
+        <?php echo e(App\Http\Controllers\statiController::pourcentageinteret()); ?>
+
           par rapport au mois derniers</div>
         
       </div>
@@ -64,9 +67,10 @@
    <div class="w-[90%] h-24 flex ">
   <div class="w-[70%] flex flex-col   text-black ">
      <div class="text-gray-500">CAPITAL</div>
-     <div class="font-bold">{{number_format($capital, 2, '.', ' ')}}Fbu</div>
+     <div class="font-bold"><?php echo e(number_format($capital, 2, '.', ' ')); ?>Fbu</div>
      <div class="text-[13px]">
-      {{App\Http\Controllers\statiController::pourcentageCapital()}}
+      <?php echo e(App\Http\Controllers\statiController::pourcentageCapital()); ?>
+
         par rapport au mois derniers</div>
       
     </div>
@@ -86,14 +90,14 @@
      
     </div>
 
-@if ($showCredit->count()>0)
+<?php if($showCredit->count()>0): ?>
   <div class="w-[98%] h-auto flex flex-col bg-white justify-center items-center rounded-md my-2  pt-2">
     <div class="w-[98%] my-2 text-black font-semibold">
         Crédit
     </div>
-    @include('home.partial.credit')
+    <?php echo $__env->make('home.partial.credit', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   </div> 
-@else
+<?php else: ?>
   <div class="w-[98%] flex flex-col-reverse md:flex-row justify-between my-2 ">
     <div class="w-full  h-auto  bg-white rounded-md flex flex-col items-center pb-4  ">
         <div class="w-full h-60 md:h-[43vh] flex flex-col items-center justify-center">
@@ -107,7 +111,7 @@
 
     </div>
   </div>
-@endif
+<?php endif; ?>
      
     
 
@@ -238,3 +242,4 @@ function compte_a_rebours()
 compte_a_rebours();
 
 </script>
+<?php /**PATH C:\xampp\htdocs\octogone finance\resources\views/home/home.blade.php ENDPATH**/ ?>

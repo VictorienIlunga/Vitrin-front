@@ -45,7 +45,9 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'image'=>$image
+            'Adresse'=>$request->Adresse,
+            'image'=>$image,
+            'number'=>$request->tel
         ]);
 
         return redirect(RouteServiceProvider::HOME);

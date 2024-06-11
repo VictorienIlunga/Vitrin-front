@@ -130,7 +130,7 @@
                 <div class="w-[10%] h-full flex  items-center justify-start">Periode </div>
                 <div class="w-[15%] h-full flex  items-center justify-center ">Clients</div>
                 <div class="w-[15%] h-full flex  items-center justify-center  ">crédits</div>
-                <div class="w-[25%] h-full flex  items-center justify-center">interets</div>
+                <div class="w-[25%] h-full flex  items-center justify-center">Intérêts</div>
                 <div class="w-[25%] h-full flex  items-center justify-center">Capital</div>
                 <div class="w-[10%] h-full flex  items-center justify-center">%</div>
               </div>
