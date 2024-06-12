@@ -80,7 +80,7 @@ body {
 
     <p><strong>PREAMBULE :</strong><br/><br/>
         Le PRETEUR est une personne morale.
-        L’EMPRUNTEUR est une personne morale Ayant comme profession {{$credit->client->prenom}}
+        L’EMPRUNTEUR est une personne morale({{$credit->client->type}})
       
         Par le présent contrat le PRETEUR met à disposition de l’EMPRUNTEUR une somme
         de <strong>{{number_format($credit->montant, 2, '.', ' ')}}Fbu</strong>,

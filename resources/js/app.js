@@ -68,17 +68,7 @@ for (let a = 0; a < navigation.length; a++) {
     })
 }
 
-//notifcation 
-$("div#notification").click(function(){
-    $("#sectionnotification").toggleClass('hidden')
-    $("#body").toggleClass('overflow-hidden')
-    notification()
-  })
-  $("#closenotification").click(function(){
-    $("#sectionnotification").toggleClass('hidden')
-    $("#body").toggleClass('overflow-hidden')
-   countnotif()
-  })
+
 
 
   $('#menu').click(function(){
