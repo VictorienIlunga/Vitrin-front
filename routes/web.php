@@ -8,7 +8,15 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\routerController;
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('/home', function(){
+    return view('home.index');
+})->name('accueil');
+Route::get('/contact', function(){
+    return view('contact.contact');
+})->name('contact');
+Route::get('/apropos', function(){
+    return view('apropos.apropos');
+})->name('apropos');
 Route::middleware('auth')->group(function () {
 
     Route::controller(routerController::class)->group(function(){
